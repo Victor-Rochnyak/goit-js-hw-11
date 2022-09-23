@@ -1,9 +1,6 @@
-body{
-  margin: 0;
-  padding: 0;
-  // background: #1da1f3;
-}
+
 .search-box{
+  position: relative;
   background: #1975b3;
   width: 100%;
   height: 50px;
@@ -12,13 +9,13 @@ body{
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-829%);
+  transform: translate(-50%,-52%);
   background: #2f3640;
   height: 45px;
   border-radius: 40px;
   padding: 10px;
 }
-.btn{
+.btn-search{
   color: #1da1f3;
   float: right;
   width: 26px;
@@ -32,11 +29,11 @@ body{
   border: none;
   
 }
-.search-box:hover .search-input{
-  width: 240px;
+.search-form:hover .search-input{
+  width: 200px;
   padding: 0 6px;
 }
-.search-box:hover .btn{
+.search-form:hover .btn-search{
  background: white;
  cursor: pointer;
 }
@@ -52,4 +49,24 @@ body{
   line-height: 23px;
   width: 0;
   transition: 0.4s;
+}
+.load-more{
+  width: 80px;
+  border-radius: 3px;
+  background: #2f3640;
+  border: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,300%);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: #1da1f3;
+  font-size: 16px;
+  line-height: 23px;
+  
+}
+.load-more:hover{
+  color: white;
 }
