@@ -12,7 +12,7 @@ const refs = {
 const newsApiService = new NewsApiService();
 // вішаємо слушатєля на кнопки
 refs.searchForm.addEventListener('submit', onSearch);
-// refs.loadMoreBtn.addEventListener('click', onloadMore);
+refs.loadMoreBtn.addEventListener('click', onloadMore);
 
 function onSearch(event) {
   event.preventDefault();
@@ -21,10 +21,11 @@ function onSearch(event) {
   // що получаємо при запитті на сервер
   newsApiService.query = event.currentTarget.elements.searchQuery.value.trim();
   newsApiService.resetPage();
+  
 
   if (newsApiService.query === '') {
     Notify.warning('Please, fill the main field');
-    refs.galleryContainer.innerHTML = '';
+    refs.gallery.innerHTML = '';
     return;
   }
 
@@ -47,14 +48,16 @@ function  onRenderGallery(data) {
      
   }
 
-  function onScrollmake(data) {
-    const markup = data.hits.map(data => renderCard(data)).join('');
-    refs.galleryContainer.insertAdjacentHTML('beforeend', markup);
+
+  function onloadMore() {
+    newsApiService.fetchGalleryCards();
+  }
   
-    lightbox.refresh();
-}
-// function onloadMore() {
-//   newsApiService.fetchArticles().then(onloadMore);
+//   function onScrollmake(data) {
+//     const markup = data.hits.map(data => renderCard(data)).join('');
+//     refs.galleryContainer.insertAdjacentHTML('beforeend', markup);
+  
+//     lightbox.refresh();
 // }
 
 // function GalleryMarkup(hits) {

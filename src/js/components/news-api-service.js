@@ -5,6 +5,7 @@ export default class NewsApiService {
     this.searchQuery = '';
     this.page = 1;
   }
+
   async fetchGalleryCards() {
     const axiosOptions = {
       method: 'get',
@@ -16,14 +17,13 @@ export default class NewsApiService {
         orientation: 'horizontal',
         safesearch: true,
         page: `${this.page}`,
-        per_page: 40,
+        per_page: 5,
       },
     };
     try {
       const response = await axios(axiosOptions);
-
       const data = response.data;
-      // console.log(data)
+      
       this.incrementPage();
       return data;
     } catch (error) {
