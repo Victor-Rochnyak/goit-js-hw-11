@@ -23,7 +23,6 @@ export default class NewsApiService {
     try {
       const response = await axios(axiosOptions);
       const data = response.data;
-      
       this.incrementPage();
       return data;
     } catch (error) {
