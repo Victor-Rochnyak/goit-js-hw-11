@@ -1,6 +1,5 @@
 export default function createGalleryMarkup(data) {
-        return `
-          <div class="photo-card">
+        return `<div class="photo-card">
       <a href="${data.webformatURL}">
         <img
           class="photo-card__img"

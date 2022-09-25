@@ -1,21 +1,28 @@
 .header{
-  margin-bottom: 100px;
+ 
 }
 .search-box{
-  position: relative;
+  position: absolute;
   background: #1975b3;
   width: 100%;
-  height: 50px;
+  height: 100px;
 }
 .search-form {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-52%);
+  // position: absolute;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%);
   background: #2f3640;
   height: 45px;
+  width: 300px;
   border-radius: 40px;
   padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 27px;
+  margin-bottom: 25px;
+  box-shadow: 250ms;
+  
 }
 .btn-search{
   color: #1da1f3;
@@ -32,10 +39,9 @@
   
 }
 .search-form:hover .search-input{
-  width: 200px;
   padding: 0 6px;
 }
-.search-form:hover .btn-search{
+.btn-search:hover{
  background: white;
  cursor: pointer;
 }
@@ -51,6 +57,7 @@
   line-height: 23px;
   width: 0;
   transition: 0.4s;
+  width: 250px;
 }
 .load-more{
   width: 80px;
