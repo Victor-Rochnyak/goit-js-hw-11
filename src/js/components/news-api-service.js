@@ -17,7 +17,7 @@ export default class NewsApiService {
         orientation: 'horizontal',
         safesearch: true,
         page: `${this.page}`,
-        per_page: 5,
+        per_page: 40,
       },
     };
     try {
