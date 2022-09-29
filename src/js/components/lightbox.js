@@ -7,7 +7,7 @@ var lightbox = new SimpleLightbox('.gallery a',{
   nav: true,
   close: true,
   caption: true,
-  captionsData: 'alt',
+  // captionsData: 'alt',
   captionPosition: 'bottom',
   captionDelay: 250,
 });

@@ -108,11 +108,15 @@ grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
   object-fit: cover;
   width: 100%;
   display: block;
-  
+  transition: transform 400ms ease-out;
+}
+.photo-card__img:hover{
+transform: scale(1.10);
 }
 .photo-card{
   box-shadow: 0 2px 20px #0003;
   border-radius: 10px;
+  overflow: hidden;
 }
 
 .info{
