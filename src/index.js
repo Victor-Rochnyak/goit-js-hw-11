@@ -54,7 +54,7 @@ const onEntry = entries => {
     if (entry.isIntersecting) {
       console.log('пора грузіть статью');
       newsApiService.fetchGalleryCards().then(data => {
-        refs.gallery.innerHTML = '';
+        refs.gallery.insertadjacenthtml = '';
         if (!data.hits.length) {
           Notify.warning(
             `Sorry, there are no images matching your search query. Please try again.`
